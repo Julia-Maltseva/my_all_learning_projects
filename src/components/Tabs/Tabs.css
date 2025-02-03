@@ -1,0 +1,41 @@
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    width: 700px;
+    height: 400px;
+}
+
+.titleButton {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+}
+
+.button_active {
+    border-bottom: none;
+    background-color: white;
+    border-top: 5px solid blue;
+}

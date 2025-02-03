@@ -1,0 +1,193 @@
+.darkMode {
+  --background-image-header: url(../../../public/images/bg-desktop-dark.jpg);
+  --background-color: rgb(11, 15, 27);
+  --gradient-primary: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  --background-color-task:  rgb(27, 38, 69);
+  --color-text-task: rgb(166, 166, 181);
+  --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  --color-border: #393A4B;
+}
+
+.lightMode {
+  --background-image-header: url(../../../public/images/bg-desktop-light.jpg);
+  --background-color: white;
+  --gradient-primary: linear-gradient(
+    to bottom right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  --background-color-task: white;
+  --color-text-task: hsl(235, 19%, 35%);
+  --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  --color-border: #E3E4F1;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
+  background-image: var(--background-image-header);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+  margin-top: 70px;
+}
+
+.infoPage {
+  display: flex;
+  width: 100%;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+.namePage {
+  color: white;
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: 1.6rem;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.addNewTask {
+  width: 100%;
+  min-height: 80px;
+  background-color: var(--background-color-task);
+  border: none;
+  border-radius: 5px;
+  margin-top: 70px;
+  color: var(--color-text-task);
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding-left: 30px;
+}
+
+.changeThemePage {
+  background: none;
+  border: none;
+}
+
+.tasksList {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.taskItem {
+  width: 100%;
+  min-height: 80px;
+  background-color: var(--background-color-task);
+  border: none;
+  border-radius: 5px;
+  color: var(--color-text-task);
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.taskItemComplited {
+  display: none;
+}
+
+.customCheckbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxTaskItemComplited {
+  border: 1px dotted white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.checkboxTaskItemComplited::before {
+  position: absolute;
+  content: "✓";
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  top: 50%;
+  left: 50%;
+  color: white;
+  opacity: 0;
+  background: var(--gradient-primary);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskItemComplited:checked + .checkboxTaskItemComplited::before {
+  opacity: 1;
+}
+
+.taskText {
+  margin-left: 15px;
+  
+}
+
+.actionsButtonsBlock {
+  display: flex;
+  margin-right: 15px;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.editTaskText {
+  background: none;
+  border: none;
+  color: rgb(166, 166, 181);
+  font-size: 30px;
+}
+
+.removeTaskItem {
+  background: none;
+  border: none;
+  color: rgb(166, 166, 181);
+  font-size: 30px;
+}
+
+.editingInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--color-text-task);
+  margin-left: 15px;
+  font-size: 1.3rem;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+

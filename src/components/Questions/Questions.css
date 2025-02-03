@@ -1,0 +1,35 @@
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 400px;
+    width: 700px;
+    margin: auto;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.list__question {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.buttonClick {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+}
+
+.opened_answer {
+    transform: rotate(180deg);
+}
